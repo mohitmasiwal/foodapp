@@ -35,7 +35,7 @@ const Menue = ({menue}) => {
                     menue.map(
                         (item,i)=>{
                             return(
-                                <img key={i} src= {`https://media-assets.swiggy.com/swiggy/image/upload/${item.imageId}`} alt="" />
+                                <img   key={i} src= {`https://media-assets.swiggy.com/swiggy/image/upload/${item.imageId}`} alt="" />
                             )
                         }
                     )

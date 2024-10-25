@@ -7,13 +7,14 @@ import Online from './component/Online'
 import Footer from './component/Footer'
  
  
+ 
 const App = () => {
   const[menue,setmenue] =useState([]);
   const[card,setCard] = useState([]);
   const[online,setonline]=useState([]);
 
   async  function fetchData(){
-    const data = await fetch('/api/dapi/restaurants/list/v5?lat=28.65420&lng=77.23730&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+    const data = await fetch('https://dummyjson.com/c/653a-24d2-4353-a99c');
     const result = await data.json();
     console.log(  result?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setmenue(result?.data?.cards[0]?.card?.card?.imageGridCards?.info)
